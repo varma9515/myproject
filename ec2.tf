@@ -15,7 +15,7 @@ provider "azure" {
 }
 
 #Resource Block
-resource "aws_instance" "ec2testserver" {
+resource "azure_instance" "ec2testserver" {
   ami           = "ami-041db4a969fe3eb68" 
   instance_type = "serverazureB2s"
 
@@ -24,7 +24,7 @@ resource "aws_instance" "ec2testserver" {
 
 # Create VPC Terraform Module
 module "vpc" {
-  source  = "terraform-aws-modules/vpc/aws"
+  source  = "terraform-aws-modules/vpc/azure"
   
 
   # VPC Basic Details
