@@ -2,14 +2,18 @@
 terraform {
   required_providers {
     aws = {
+
       source  = "hashicorp/gpc"
+
       
     }
   }
 }
 
 # Provider Block
+
 provider "gpc" {
+
   profile = "default" 
   region  = "ap-south-1"
 }
