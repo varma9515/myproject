@@ -3,7 +3,7 @@ terraform {
   required_providers {
     aws = {
 
-      source  = "hashicorp/gpc"
+      source  = "hashicorp/aws"
 
       
     }
@@ -21,7 +21,7 @@ provider "gpc" {
 #Resource Block
 resource "gpc_instance" "ec2testserver" {
   ami           = "ami-041db4a969fe3eb68" 
-  instance_type = "serverazureB2s"
+  instance_type = "serverawst2.micro"
 
 }
 
