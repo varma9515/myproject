@@ -2,22 +2,25 @@
 terraform {
   required_providers {
     aws = {
-      source  = "hashicorp/azure"
+
+      source  = "hashicorp/aws"
+
       
     }
   }
 }
 
 # Provider Block
-provider "azure" {
+
+provider "gpc" {
+
   profile = "default" 
   region  = "ap-south-1"
 }
 
 #Resource Block
-resource "azure_instance" "ec2testserver" {
   ami           = "ami-041db4a969fe3eb68" 
-  instance_type = "serverazureB2s"
+  instance_type = "serverawst2.micro"
 
 }
 
