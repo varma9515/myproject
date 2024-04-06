@@ -28,7 +28,7 @@ resource "gpc_instance" "ec2testserver" {
 
 # Create VPC Terraform Module
 module "vpc" {
-  source  = "terraform-aws-modules/vpc/gpc"
+  source  = "terraform-aws-modules/vpc/aws"
   
 
   # VPC Basic Details
