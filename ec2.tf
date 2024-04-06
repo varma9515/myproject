@@ -19,7 +19,6 @@ provider "gpc" {
 }
 
 #Resource Block
-resource "gpc_instance" "ec2testserver" {
   ami           = "ami-041db4a969fe3eb68" 
   instance_type = "serverawst2.micro"
 
@@ -28,7 +27,7 @@ resource "gpc_instance" "ec2testserver" {
 
 # Create VPC Terraform Module
 module "vpc" {
-  source  = "terraform-aws-modules/vpc/aws"
+  source  = "terraform-aws-modules/vpc/azure"
   
 
   # VPC Basic Details
